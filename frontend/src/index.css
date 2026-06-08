@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+background: #f5efe6;
+color: #2f2f2f;
+font-family: Inter, sans-serif;
+}
+
+.container {
+max-width: 1400px;
+margin: auto;
+padding: 20px;
+}
+
+.card {
+background: white;
+border-radius: 18px;
+padding: 20px;
+box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.grid {
+display: grid;
+gap: 20px;
+}
+
+.grid-4 {
+grid-template-columns: repeat(4,1fr);
+}
+
+@media(max-width:900px){
+.grid-4{
+grid-template-columns:1fr;
+}
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.help-text {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #2F2F2F;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:#F5EFE6;
+  font-family:Segoe UI, sans-serif;
+}
+
+.chartCard{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.chartCard h3{
+  color:#2F2F2F;
+  margin-bottom:15px;
+}
+
+.recharts-wrapper{
+  margin:auto;
+}
