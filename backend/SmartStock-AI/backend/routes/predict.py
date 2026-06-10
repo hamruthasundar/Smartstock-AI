@@ -44,13 +44,8 @@ FEATURE_PATH = os.path.join(
     "feature_columns.pkl"
 )
 
-model = joblib.load(
-    MODEL_PATH
-)
-
-feature_columns = joblib.load(
-    FEATURE_PATH
-)
+model = None
+feature_columns = None
 
 
 @predict_bp.route(
@@ -61,6 +56,15 @@ def predict():
 
     try:
 
+        global model
+        global feature_columns
+
+        if model is None:
+            model = joblib.load(MODEL_PATH)
+
+        if feature_columns is None:
+            feature_columns = joblib.load(FEATURE_PATH)
+            
         data = request.json
 
         category = data.get(
