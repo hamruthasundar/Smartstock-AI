@@ -3,7 +3,7 @@ import React, {
   useState
 } from "react";
 
-import axios from "axios";
+import API from "../services/api";
 
 import {
   LineChart,
@@ -62,9 +62,7 @@ const Forecast = () => {
     try {
 
       const response =
-        await axios.get(
-          "http://localhost:5000/metadata"
-        );
+          await API.get("/metadata");
 
       setMetadata(
         response.data
@@ -108,15 +106,15 @@ const Forecast = () => {
     try {
 
       const response =
-        await axios.post(
-          "http://localhost:5000/predict",
-          formData
-        );
+  await API.post(
+    "/predict",
+    formData
+  );
 
         const supplierResponse =
-      await axios.get(
-        "http://localhost:5000/recommended-supplier"
-      );
+  await API.get(
+    "/recommended-supplier"
+  );
 
       setResult(
         response.data
