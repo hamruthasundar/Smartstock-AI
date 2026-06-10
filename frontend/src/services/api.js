@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-baseURL: "http://localhost:5000"
+  baseURL: "https://smartstock-api-qrr5.onrender.com"
 });
 
 export const getDashboard = () =>
