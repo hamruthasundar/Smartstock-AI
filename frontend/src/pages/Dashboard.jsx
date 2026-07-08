@@ -157,7 +157,7 @@ const Dashboard = () => {
   <button
     onClick={() =>
       window.open(
-        "http://127.0.0.1:5000/export/excel"
+        "https://smartstock-api-qrr5.onrender.com/export/excel"
       )
     }
   >
@@ -167,7 +167,7 @@ const Dashboard = () => {
   <button
     onClick={() =>
       window.open(
-        "http://127.0.0.1:5000/export/pdf"
+        "https://smartstock-api-qrr5.onrender.com/export/pdf"
       )
     }
     style={{

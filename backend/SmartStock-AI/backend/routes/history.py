@@ -43,3 +43,5 @@ def get_history():
             "error": str(e)
 
         }), 500
+
+        
